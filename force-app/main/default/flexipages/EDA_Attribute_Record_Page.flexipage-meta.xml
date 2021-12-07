@@ -23,6 +23,7 @@
                     <name>numVisibleActions</name>
                     <value>3</value>
                 </componentInstanceProperties>
+                <identifier>force_highlightsPanelId</identifier>
                 <componentName>force:highlightsPanel</componentName>
             </componentInstance>
         </itemInstances>
@@ -32,6 +33,7 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <identifier>runtime_sales_activities_activityPanelId</identifier>
                 <componentName>runtime_sales_activities:activityPanel</componentName>
             </componentInstance>
         </itemInstances>
@@ -53,6 +55,7 @@
                     <name>title</name>
                     <value>Standard.Tab.activity</value>
                 </componentInstanceProperties>
+                <identifier>flexipage_tabId</identifier>
                 <componentName>flexipage:tab</componentName>
             </componentInstance>
         </itemInstances>
@@ -62,6 +65,7 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <identifier>force_detailPanelId</identifier>
                 <componentName>force:detailPanel</componentName>
             </componentInstance>
         </itemInstances>
@@ -71,6 +75,7 @@
                     <name>tabs</name>
                     <value>Facet-c5252cf8-e4d9-41de-96cf-a7829cfcf922</value>
                 </componentInstanceProperties>
+                <identifier>flexipage_tabsetId</identifier>
                 <componentName>flexipage:tabset</componentName>
             </componentInstance>
         </itemInstances>
