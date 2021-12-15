@@ -1,0 +1,43 @@
+description: "This list view contains an Apex Contact list data provider for an Account"
+schema:
+  properties:
+    title:
+      type: string
+      defaultValue: "Contact Information"
+    accountId:
+      type: string
+dataproviders:
+  contacts:
+    definition: "apex__ObjectInputListOutputExample.getAccountContacts"
+    properties:
+      acct:
+        Id: "{!view.properties.accountId}"
+components:
+  - definition: message
+    properties:
+      title: "{!view.properties.title}"
+    components:
+      - definition: header
+        properties:
+          text: "My Contacts"
+      - definition: iteration
+        properties:
+          foreach: "{!contacts}"
+          foritem: "contact"
+        components:
+          - definition: divider
+          - definition: section
+            properties:
+              text: "{!contact.Name}"
+          - definition: field
+            properties:
+              field: "{!contact.Id}"
+              label: "Id"
+          - definition: field
+            properties:
+              field: "{!contact.Phone}"
+              label: "Phone"
+          - definition: field
+            properties:
+              field: "{!contact.Email}"
+              label: "Email"

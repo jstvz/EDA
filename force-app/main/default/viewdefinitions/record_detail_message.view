@@ -1,0 +1,56 @@
+description: "This component displays record details in a message"
+schema:
+  properties:
+    headerText:
+      type: string
+      defaultValue: "Contact Details"
+    contactName:
+      type: string
+      required: true
+    detailPageLink:
+      type: string   
+dataproviders:
+  contacts:
+    definition: "apex__RecordDataProvider.getContactById"
+    properties:
+      contactName: "{!view.properties.contactName}"  
+components:
+  - definition: message
+    components:
+      - definition: header
+        properties:
+          text: "{!view.properties.headerText} for {!view.properties.contactName}"
+      - definition: iteration
+        properties:
+          foreach: "{!contacts}"
+          foritem: "contact"
+        components:
+          - definition: divider
+          - definition: field
+            properties:
+              field: "{!contact.Name}"
+              label: "Name"
+          - definition: field
+            properties:
+              field: "{!contact.Id}"
+              label: "Id"
+          - definition: field
+            properties:
+              field: "{!contact.Phone}"
+              label: "Phone"
+          - definition: field
+            properties:
+              field: "{!contact.Email}"
+              label: "Email"
+          - definition: actions
+            components:
+              - definition: button
+                properties:
+                  name: "visit_contact_detail_button"
+                  label: "Visit the Contact Detail Page"
+                  url: "https://ability-java-508-dev-ed.lightning.force.com/lightning/r/Contact/{!contact.Id}/view"
+
+        
+      
+          
+    

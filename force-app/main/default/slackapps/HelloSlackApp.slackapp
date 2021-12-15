@@ -1,0 +1,12 @@
+description: Hello World Example App
+commands:
+  /get-contact-info:
+    action:
+      definition: apex__action__ViewRecordCommandDispatcher
+    description: A command to get contact info.
+messageShortcuts:
+  testMsgShortCut:
+    action:
+      definition: apex__action__SayHello
+    title: say hello through msg shortcut
+    description: say hello through msg shortcut.
