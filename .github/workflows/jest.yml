@@ -21,4 +21,9 @@ jobs:
           yarn install
       - name: Run Jest Tests
         run: |
-          npx lwc-jest  --skipApiVersionCheck -- --coverage --passWithNoTests
+          npx lwc-jest --skipApiVersionCheck -- --coverage --coverageDirectory=coverage --passWithNoTests
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v2
+        with:
+            name: code-coverage-report
+            path: coverage/json-summary.json
