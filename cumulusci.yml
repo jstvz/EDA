@@ -8,7 +8,6 @@ project:
         install_class: STG_InstallScript
     git:
         prefix_release: rel/
-        repo_url: https://github.com/SalesforceFoundation/EDA
         default_branch: main
     source_format: sfdx
     dependency_resolutions:
